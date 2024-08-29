@@ -1,14 +1,11 @@
-// APP 컴포넌트
-
-import Component from "./core/Components";
+import Component from "./core/Component.js";
+import CounterPage from "./pages/CounterPage.js";
 
 export default class App extends Component {
   template() {
-    return (
-      <>
-        <main data-component="counter-app"></main>
-      </>
-    );
+    return `
+      <main data-component="counter-app"></main>
+    `;
   }
 
   mounted() {

@@ -1,23 +1,22 @@
-import Component from "../core/Components";
+import Component from "../core/Component.js";
 
 export default class Counter extends Component {
   setup() {
-    // default
     this.$state = {
       counter: 0,
     };
   }
 
   template() {
-    const { coutner } = this$.$state;
-    return (
+    const { counter } = this.$state;
+    return `
       <div>
         <h2>Counter Component</h2>
         <div>${counter}</div>
-        <button class="up">증가</button>
-        <button class="down">감소</button>
+        <button class='up'>증가</button>
+        <button class='down'>감소</button>
       </div>
-    );
+    `;
   }
 
   setEvent() {
@@ -27,14 +26,15 @@ export default class Counter extends Component {
     });
 
     this.addEvent("click", ".down", ({ target }) => {
-      const next = this.$state.counter;
-      this.up(next);
+      const prev = this.$state.counter;
+      this.down(prev);
     });
   }
 
   up(prev) {
     this.setState({ counter: prev + 1 });
   }
+
   down(prev) {
     this.setState({ counter: prev - 1 });
   }

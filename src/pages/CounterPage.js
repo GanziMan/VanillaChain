@@ -1,20 +1,19 @@
-import Counter from "../components/Counter";
-import Component from "../core/Components";
+//CounterPage.js
+import Component from "../core/Component.js";
+import Counter from "../_components/Counter.js";
 
 export default class CounterPage extends Component {
   template() {
-    return (
-      <>
+    return `
         <h1>Counter Page</h1>
         <div data-component="counter-up"></div>
-      </>
-    );
+    `;
   }
+
   mounted() {
     const $counter = this.$target.querySelector(
       '[data-component="counter-up"]'
     );
-
     new Counter($counter);
   }
 }
