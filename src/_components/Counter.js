@@ -1,4 +1,4 @@
-import Component from "../core/Component.js";
+import Component from "../_core/Component.js";
 
 export default class Counter extends Component {
   setup() {

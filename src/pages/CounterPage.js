@@ -1,5 +1,5 @@
 //CounterPage.js
-import Component from "../core/Component.js";
+import Component from "../_core/Component.js";
 import Counter from "../_components/Counter.js";
 
 export default class CounterPage extends Component {
