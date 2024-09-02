@@ -31,6 +31,7 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+    historyApiFallback: true, // 모든 404 요청을 index.html로 리디렉션
   },
   mode: "development",
 };
