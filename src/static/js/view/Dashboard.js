@@ -7,6 +7,6 @@ export default class Dashboard extends AbstractView {
   }
 
   async getHtml() {
-    return '<h1>Welcome back, Dom</h1> <p> <a href="/posts" data-link> View recent posts</a>';
+    return '<h1>Welcome back, Dom</h1> <p> <a href="/posts" data-link> View recent posts2</a>';
   }
 }
