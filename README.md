@@ -6,7 +6,7 @@
 
 ## Introduction
 
-- 프로젝트가 해결하려는 문제 SinglePageApplication 형태로 만들기
+- 블록체인 기반 입출금 웹 만들기
 - VanillaJs 웹 개발 경험이 없다보니 스스로가 부족한 것 같아 시작하게 되었습니다.
 
 ## Installation
