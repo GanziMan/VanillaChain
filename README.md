@@ -13,10 +13,10 @@
 
 ```bash
 # 프로젝트 클론
-git clone https://github.com/GanziMan/VanillaJsSpa.git
+git clone https://github.com/GanziMan/VanillaChain.git
 
 # 디렉토리로 이동
-cd VanillaJsSpa
+cd VanillaChain
 
 # 필요한 의존성 설치 (npm이든 yarn이든 사용한 패키지 매니저)
 npm install
