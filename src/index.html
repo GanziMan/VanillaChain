@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=deive-width, initial-scale=1.0" />
-    <title>Single Page App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain Deposit/Withdraw</title>
+    <link rel="stylesheet" href="src/css/global.css" />
+    <!-- CSS 파일을 로드 -->
   </head>
   <body>
-    <nav class="nav">
-      <a href="/" class="nav_link" data-link>Dashboard</a>
-      <a href="/posts" class="nav_link" data-link>Posts</a>
-      <a href="/settings" class="nav_link" data-link>Settings</a>
-    </nav>
+    <div id="app">
+      <h1>Blockchain Deposit/Withdraw</h1>
 
-    <div id="app"></div>
+      <!-- 지갑 연결 섹션 -->
+      <section id="walletSection">
+        <button id="connectWalletBtn">Connect Wallet</button>
+        <p id="walletAddress">Not connected</p>
+        <!-- 지갑 주소 표시 -->
+      </section>
+
+      <!-- 입금 섹션 -->
+      <section id="depositSection">
+        <h2>Deposit Ether</h2>
+        <input
+          type="number"
+          id="depositAmount"
+          placeholder="Amount to Deposit"
+        />
+        <button id="depositBtn">Deposit</button>
+      </section>
+
+      <!-- 출금 섹션 -->
+      <section id="withdrawSection">
+        <h2>Withdraw Ether</h2>
+        <input
+          type="number"
+          id="withdrawAmount"
+          placeholder="Amount to Withdraw"
+        />
+        <button id="withdrawBtn">Withdraw</button>
+      </section>
+
+      <!-- 트랜잭션 상태 및 잔액 확인 섹션 -->
+      <section id="statusSection">
+        <h2>Transaction Status</h2>
+        <div id="status">No transactions yet</div>
+        <!-- 트랜잭션 상태를 표시 -->
+
+        <h2>Contract Balance</h2>
+        <div id="balanceDisplay">Balance: 0 ETH</div>
+        <!-- 컨트랙트 잔액 표시 -->
+        <button id="getBalanceBtn">Get Contract Balance</button>
+      </section>
+    </div>
+
+    <script src="src/js/web3Provider.js" defer></script>
+    <!-- Web3 초기화 스크립트 -->
+    <script src="src/js/walletConnect.js" defer></script>
+    <!-- 지갑 연결 스크립트 -->
+    <script src="src/js/deposit.js" defer></script>
+    <!-- 입금 스크립트 -->
+    <script src="src/js/withdraw.js" defer></script>
+    <!-- 출금 스크립트 -->
+    <script src="src/js/app.js" defer></script>
+    <!-- 메인 애플리케이션 로직 -->
   </body>
 </html>
